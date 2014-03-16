@@ -1,0 +1,31 @@
+<!DOCTYPE suite>
+<suite name="Parallel Tests" verbose="1" thread-count="2" parallel="tests">
+    <tests>
+        <test name="firefox">
+            <parameters>
+                <parameter name="browser" value="firefox" />
+                <parameter name="hub" value="http://localhost:4444/wd/hub"/>
+                <parameter name="url" value="http://go.mail.ru"/>
+            </parameters>
+            <classes>
+                <class name="go.AdvancedSearch" />
+                <class name="go.BasicSearch" />
+                <class name="go.Ranking" />
+                <class name="go.Suggestions" />
+            </classes>
+        </test>
+        <test name="chrome">
+            <parameters>
+                <parameter name="browser" value="chrome" />
+                <parameter name="hub" value="http://localhost:4444/wd/hub"/>
+                <parameter name="url" value="http://go.mail.ru"/>
+            </parameters>
+            <classes>
+                <class name="go.AdvancedSearch" />
+                <class name="go.BasicSearch" />
+                <class name="go.Ranking" />
+                <class name="go.Suggestions" />
+            </classes>
+        </test>
+    </tests>
+</suite>
